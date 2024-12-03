@@ -1,0 +1,16 @@
+.trades {
+    padding: 1rem;
+}
+
+.tradeList {
+    list-style: none;
+    padding: 0;
+}
+
+.tradeList li {
+    background: #ffffff;
+    margin: 0.5rem 0;
+    padding: 0.8rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

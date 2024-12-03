@@ -1,0 +1,12 @@
+:root {
+    --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    --line-height: 1.5;
+    --font-weight: 400;
+    --primary-color: #646cff;
+    --primary-hover-color: #535bf2;
+    --background-color-dark: #242424;
+    --background-color-light: #ffffff;
+    --button-background-dark: #1a1a1a;
+    --button-background-light: #f9f9f9;
+    --focus-ring-color: -webkit-focus-ring-color;
+}

@@ -1,0 +1,20 @@
+a {
+    font-weight: 500;
+    color: var(--primary-color);
+    text-decoration: inherit;
+}
+
+a:hover {
+    color: var(--primary-hover-color);
+}
+
+h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: var(--line-height);
+    font-weight: var(--font-weight);
+}

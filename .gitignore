@@ -1,0 +1,79 @@
+# internal pjm info
+internal_pjm/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+.venv/
+env/
+venv/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# dotenv environment variables file
+.env
+
+# Node modules (falls du sie in deinem Projekt hast)
+node_modules/
+
+# Django stuff:
+db.sqlite3
+*.log
+
+# Static files
+staticfiles/
+static/
+
+# Media uploads
+media/
+
+# VSCode settings
+.vscode/
+
+# JetBrains IDE settings
+.idea/
+
+# macOS files
+.DS_Store
+
+# Thumbnails
+*_thumb.*
+
+# Python cache and package files
+*.pyo
+*.~c
+*.so
+*.egg
+*.dll
+*.bin
+*.bak
+*.swp
+*.lock
+
+# Testing
+htmlcov/
+.coverage
+.tox/
+.nox/
+.pytest_cache/
+nosetests.xml
+coverage.xml
+
+# AWS and cloud-related
+*.pem
+*.key
+*.crt
+*.pub
+*.aws
+
+# Docker
+docker-compose.override.yml
+*.dockerignore
+*.env.docker
