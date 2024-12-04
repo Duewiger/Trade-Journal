@@ -1,0 +1,421 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #ffffff;
+}
+
+.dashboard h1 {
+    margin-top: 2rem;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navbar li {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.navbar button,
+.navbar a {
+    color: white;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.navbar button:hover,
+.navbar a:hover {
+    background-color: #555;
+}
+
+.navbar button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(100, 108, 255, 0.5);
+}
+
+.trade-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 500px;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.trade-form input,
+.trade-form textarea,
+.trade-form button {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.trade-form input:focus,
+.trade-form textarea:focus {
+    border-color: #646cff;
+    outline: none;
+    box-shadow: 0 0 3px rgba(100, 108, 255, 0.5);
+}
+
+.trade-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.trade-form button {
+    background-color: #646cff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.trade-form button:hover {
+    background-color: #535bf2;
+}
+
+.trade-form input[type="submit"] {
+    width: 100%;
+}
+
+.trade-history {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 800px;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.trade-history ul {
+    list-style: none;
+    padding: 0;
+}
+
+.trade-history li {
+    padding: 0.8rem;
+    border-bottom: 1px solid #eee;
+}
+
+.trade-history li:last-child {
+    border-bottom: none;
+}
+
+.open-positions {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 800px;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.open-positions ul {
+    list-style: none;
+    padding: 0;
+}
+
+.open-positions li {
+    padding: 0.8rem;
+    border-bottom: 1px solid #eee;
+}
+
+.open-positions li:last-child {
+    border-bottom: none;
+}
+
+.notes-section {
+    margin-top: 2rem;
+    margin-bottom: 10rem;
+    width: 100%;
+    max-width: 800px;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.notes-section h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.notes-section textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    margin-bottom: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.notes-section textarea:focus {
+    border-color: #646cff;
+    box-shadow: 0 0 3px rgba(100, 108, 255, 0.5);
+}
+
+.notes-section button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #646cff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.notes-section button:hover {
+    background-color: #535bf2;
+}
+
+button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+
+button:hover {
+    border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.auth-container h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.auth-form input {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.auth-form input:focus {
+    border-color: #646cff;
+    outline: none;
+}
+
+.auth-form button {
+    padding: 0.8rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #646cff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-form button:hover {
+    background-color: #535bf2;
+}
+
+.auth-container p {
+    margin-top: 1rem;
+}
+
+.auth-container a {
+    color: #646cff;
+    text-decoration: none;
+}
+
+.auth-container a:hover {
+    text-decoration: underline;
+}
+
+.message {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #dff0d8;
+    color: #3c763d;
+    border: 1px solid #d6e9c6;
+    border-radius: 4px;
+}
+
+.capital-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.capital-form input {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.capital-form button {
+    padding: 0.8rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #646cff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.capital-form button:hover {
+    background-color: #535bf2;
+}
+
+.search-bar {
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar input {
+    width: 300px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #646cff;
+}
+
+.depot-overview {
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 50rem;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.depot-overview h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.depot-overview ul {
+    list-style: none;
+    padding: 0;
+}
+
+.depot-overview li {
+    margin: 0.5rem 0;
+}
+
+
+@media (max-width: 768px) {
+    .trade-form {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar li {
+        margin-bottom: 0.5rem;
+    }
+
+    .trade-form input,
+    .trade-form button {
+        width: 100%;
+    }
+}
